@@ -62,3 +62,16 @@ The project currently supports resume analysis, job-description matching, PDF/im
 - Improved scoring algorithm
 - Resume/job compatibility percentage
 - Deployment to a public websites
+
+
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Resume Analysis
+![Resume Analysis](screenshots/results.png)
+
+### Detailed Results
+![Detailed Results](screenshots/results-details.png)
