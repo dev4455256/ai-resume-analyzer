@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>AI Resume Analyzer</h1>
+    <p>Upload your resume to analyze it.</p>
+    <div class="upload-box">
+    <label for="resumeFile" class="upload-label">
+        📄 Choose Resume
+    </label>
+
+    <input
+        type="file"
+        id="resumeFile"
+        accept=".pdf,.jpg,.jpeg,.png"
+    >
+
+    <p class="file-info" id="fileInfo">PDF, JPG, JPEG or PNG</p>
+</div>
+    <div class="job-section">
+    <p>Paste Job Description:</p>
+    <textarea
+        id="jobDescription"
+        rows="7"
+        placeholder="Paste the job description here..."
+    ></textarea>
+</div>
+
+    <button id="analyzeBtn">Analyze Resume</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
