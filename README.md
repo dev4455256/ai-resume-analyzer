@@ -45,9 +45,13 @@ Activate the virtual environment:
 
 ```powershell
 .\venv\Scripts\Activate.ps1
+```
+
 Start the FastAPI backend:
 
-    uvicorn main:app --reload
+```bash
+uvicorn main:app --reload
+```
 
 Then open the frontend using Live Server.
 
