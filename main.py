@@ -3,19 +3,23 @@ from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pypdf import PdfReader
 from io import BytesIO
-from dotenv import load_dotenv
-from openai import OpenAI
-import os
+# from dotenv import load_dotenv
+# from openai import OpenAI
+# import os
 import pytesseract
 from PIL import Image
 from pdf2image import convert_from_bytes
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-load_dotenv()
+import platform
+
+if platform.system() == "Windows":    
+   pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+#load_dotenv()
 
 
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 app = FastAPI()
 
