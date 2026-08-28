@@ -19,7 +19,7 @@ analyzeBtn.addEventListener("click", async () => {
     result.innerHTML = "<p>Analyzing resume...</p>";
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/upload_resume", {
+        const response = await fetch("https://ai-resume-analyzer-7ccz.onrender.com/upload_resume", {
             method: "POST",
             body: formData
         });
