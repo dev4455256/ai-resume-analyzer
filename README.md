@@ -64,8 +64,7 @@ The project currently supports resume analysis, job-description matching, PDF/im
 - AI-generated resume feedback
 - Better skill extraction
 - Improved scoring algorithm
-- Resume/job compatibility percentage
-- Deployment to a public websites
+
 
 
 
