@@ -1,5 +1,9 @@
 # AI Resume Analyzer
 
+## Live Demo
+
+https://ai-resume-analyzer-7ccz.onrender.com
+
 An AI-powered Resume Analyzer built using Python, FastAPI, HTML, CSS, and JavaScript.
 
 ## Features
