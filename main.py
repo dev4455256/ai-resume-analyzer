@@ -75,12 +75,17 @@ async def upload_resume(file: UploadFile = File(...), job_description: str = For
     if filename.endswith(".pdf") and len(text.strip()) < 50:
        print("Normal extraction failed. Using OCR...")
 
-       images = convert_from_bytes(contents, poppler_path=r"C:\Users\DEVANSH\Downloads\Release-26.02.0-0\poppler-26.02.0\Library\bin"
+    if platform.system() == "Windows":
+       images = convert_from_bytes(
+          contents,
+          poppler_path=r"C:\Users\DEVANSH\Downloads\Release-25.02.0-0\poppler-25.02.0\Library\bin"
        )
+    else:
+        images = convert_from_bytes(contents)
        
-       text = ""
+    text = ""
 
-       for image in images:
+    for image in images:
            text += pytesseract.image_to_string(image)
 
     print("EXTRACTED TEXT:")
