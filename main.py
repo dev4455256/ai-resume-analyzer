@@ -1,5 +1,6 @@
 import re
 from fastapi import FastAPI, UploadFile, File, Form
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pypdf import PdfReader
 from io import BytesIO
@@ -33,9 +34,9 @@ app.add_middleware(
 
 
 
-@app.get("/")
-def home():
-    return {"message": "AI Resume Analyzer API is running!"}
+# @app.get("/")
+# def home():
+#     return {"message": "AI Resume Analyzer API is running!"}
 
 
 @app.post("/upload_resume")
@@ -273,4 +274,6 @@ async def upload_resume(file: UploadFile = File(...), job_description: str = For
         "missing_job_skills": missing_job_skills,
         "match_label": match_label,
         "text": text[:2000]
-    }      
+    }
+
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
